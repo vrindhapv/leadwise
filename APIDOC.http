@@ -1,0 +1,77 @@
+# api call for listing all leads
+####
+GET http://127.0.0.1:8000/api/leads/
+Accept: application/json
+Authorization: Token 715f375155483c0164128d45c7e7408d0256659d
+
+#Api call for creating lead
+###
+POST  http://127.0.0.1:8000/api/leads/
+Content-Type: application/json
+Authorization: Token 715f375155483c0164128d45c7e7408d0256659d
+
+
+{
+  "name":"sanil",
+  "email":"sanil@gmail.com" ,
+  "company":"wipro",
+  "phone": 984326,
+  "source":"linkedin" ,
+  "requirement":"mobile application development ",
+  "budget":50000,
+  "notes":"develop mobile application"
+}
+
+
+#Api call for retrieving a lead
+###
+GET http://127.0.0.1:8000/api/leads/1/
+Accept: application/json
+Authorization: Token 715f375155483c0164128d45c7e7408d0256659d
+
+
+
+#API call for updating lead
+###
+PUT  http://127.0.0.1:8000/api/leads/2/
+Content-Type: application/json
+Authorization: Token 715f375155483c0164128d45c7e7408d0256659d
+
+
+
+{
+  "name":"techlab",
+  "email":"techlab@gmail.com" ,
+  "company":"techlab",
+  "phone": 89898989,
+  "source":"website" ,
+  "requirement":"mobile application development ",
+  "budget":350000,
+  "notes":"develop mobile application"
+}
+
+
+#Api call for deleting  a lead
+###
+DELETE  http://127.0.0.1:8000/api/leads/1/
+Accept: application/json
+Authorization: Token 715f375155483c0164128d45c7e7408d0256659d
+
+
+
+#api call for lead summary
+###
+GET http://127.0.0.1:8000/api/leads/summary/
+Accept: application/json
+Authorization: Token 715f375155483c0164128d45c7e7408d0256659d
+
+
+#api call for getting token
+###
+POST http://127.0.0.1:8000/api/token/
+Content-Type: application/json
+
+{
+  "username":"admin",
+  "password":"admin"
+}
